@@ -1,0 +1,20 @@
+1:apple is Malus
+2:banana is Musa
+3:cherry is Prunus avium
+4:durian is Durio
+5:elderberry is Sambucus
+6:fig is Ficus
+7:grape is Vitus
+8:honeydew is Cucumis melo
+9:icaco is Chrysobalanus icaco
+10:juniper is Juniperus
+11:kiwi is Actinidia
+12:lemon is Citrus limon
+13:lime is Citrus aurantiifolia
+14:mango is Mangifera indica
+15:orange is Citrus sinensis
+16:pear is Pyrus
+17:persimmon is Diospyros kaki
+18:plum is Prunus domestica
+19:quince is Cydonia oblonga
+20:raspberry is Rubus idaeus
