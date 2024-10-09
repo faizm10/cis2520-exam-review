@@ -13,7 +13,7 @@ typedef struct operand {
 
 
 /* Function defintions for our stack */
-
+int isDigit(char ch);
 void push(Operand ** stack ,double value);
 double pop(Operand ** stack);
 void print(Operand * stack);

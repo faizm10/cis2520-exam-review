@@ -24,6 +24,11 @@ void prompt(){
  * @return Pointer to the newly added car in the list.
  */
 struct car * insert_to_list(struct car ** head, char plate[], int mileage, int return_date){
+    
+    if (head!=NULL){
+
+    }
+    
     return NULL;
 }
 
