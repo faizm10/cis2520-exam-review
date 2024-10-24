@@ -1,12 +1,20 @@
+/*
+Name: Faiz Mustansar
+Student ID: 1261489
+Assignment: A2
+Date: Oct 11, 2024
+*/
+
 //Libraries Used Add more here if needed
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>  
 #include <stdbool.h>
 #include <stdlib.h>
 
 //Our Linked List Node
 struct car{
-  char plate[7];
+  char plate[8];
   int mileage;
   int return_date; //Return date should be -1 for a car with no return date
   struct car *next;
@@ -14,7 +22,7 @@ struct car{
 
 
 //Function Definitions
-void prompt();
+void prompt(void);
 struct car * insert_to_list(struct car ** head, char plate[], int mileage, int return_date);
 void print_list(struct car *head);
 bool is_plate_in_list(struct car * head, char plate[]);

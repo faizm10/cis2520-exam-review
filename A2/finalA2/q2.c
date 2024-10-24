@@ -1,3 +1,10 @@
+/*
+Name: Faiz Mustansar
+Student ID: 1261489
+Assignment: A2
+Date: Oct 11, 2024
+*/
+
 #include "q2.h"
 #include <stdio.h>
 #include <stdlib.h>
