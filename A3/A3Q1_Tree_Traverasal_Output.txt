@@ -1,0 +1,7 @@
+Expression '(((x1+5.12)*(x2-7.68))/x3)'
+
+Preorder Output: / * + x1 5.12 - x2 7.68 x3 
+
+Inorder Output: ((((x1)+(5.12))*((x2)-(7.68)))/(x3))
+
+Postorder Output: x1 5.12 + x2 7.68 - * x3 /
