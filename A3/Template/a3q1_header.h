@@ -1,4 +1,11 @@
-#include <stdio.h>
+
+/*
+Name: Faiz Mustansar
+Student ID: 1261489
+Assignment: A3
+Date: Nov 15, 2024
+*/
+#include<stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
@@ -7,27 +14,29 @@
 #define BINARY_TREE
 
 // Node structure representing a binary tree node containing string data.
-typedef struct Node {
+typedef struct Node
+{
     char data[10];
     struct Node *left, *right;
 } Node;
 
 // Structure that stores variable names and their associated values.
-typedef struct {
+typedef struct
+{
     char varName[10];
     float value;
 } Variable;
 
-Variable variables[10];
-int varCount;
+extern Variable variables[10];
+extern int varCount;
 
-Node* createNode(char *data);
-Node* parseExpression(char *expr);
+Node *createNode(char *data);
+int isValidCharacter(char c);
+Node *parseExpression(char *expr);
 void preorder(Node *root);
 void inorder(Node *root);
 void postorder(Node *root);
 void promptVariables(Node *root);
 float calculate(Node *root);
-
 
 #endif

@@ -18,14 +18,14 @@ SRC_Q2 = a3q2_main.c a3q2_functions.c
 HEADERS_Q1 = a3q1_header.h
 HEADERS_Q2 = a3q2_header.h
 
-# All is the default target that builds both projects
+# Default target to build both projects
 all: $(TARGET_Q1) $(TARGET_Q2)
 
-# Compile q1
+# Compile question 1
 $(TARGET_Q1): $(SRC_Q1) $(HEADERS_Q1)
 	$(CC) $(CFLAGS) -o $(TARGET_Q1) $(SRC_Q1)
 
-# Compile q2
+# Compile question 2
 $(TARGET_Q2): $(SRC_Q2) $(HEADERS_Q2)
 	$(CC) $(CFLAGS) -o $(TARGET_Q2) $(SRC_Q2)
 

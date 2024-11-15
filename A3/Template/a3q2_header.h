@@ -1,3 +1,9 @@
+/*
+Name: Faiz Mustansar
+Student ID: 1261489
+Assignment: A3
+Date: Nov 15, 2024
+*/
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdbool.h>

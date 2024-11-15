@@ -1,0 +1,55 @@
+Menu:
+1. Display Adjacency List
+2. Perform Breadth-First Search (BFS)
+3. Perform Depth-First Search (DFS)
+4. Find Shortest Path using Dijkstra's Algorithm
+5. Exit
+Enter your choice: 1
+Adjacency List:
+Vertex 1: -> 1 (4) -> 2 (5) NULL
+Vertex 2: -> 0 (4) -> 2 (1) -> 3 (9) -> 4 (2) NULL
+Vertex 3: -> 0 (5) -> 1 (1) -> 4 (3) NULL
+Vertex 4: -> 1 (9) NULL
+Vertex 5: -> 1 (2) -> 2 (3) NULL
+
+Menu:
+1. Display Adjacency List
+2. Perform Breadth-First Search (BFS)
+3. Perform Depth-First Search (DFS)
+4. Find Shortest Path using Dijkstra's Algorithm
+5. Exit
+Enter your choice: 2
+Final BFS Order:
+1 2 3 4 5 
+
+Menu:
+1. Display Adjacency List
+2. Perform Breadth-First Search (BFS)
+3. Perform Depth-First Search (DFS)
+4. Find Shortest Path using Dijkstra's Algorithm
+5. Exit
+Enter your choice: 3
+1 2 3 5 4 
+
+Menu:
+1. Display Adjacency List
+2. Perform Breadth-First Search (BFS)
+3. Perform Depth-First Search (DFS)
+4. Find Shortest Path using Dijkstra's Algorithm
+5. Exit
+Enter your choice: 4
+
+Shortest distance from vertex 1 to vertex 1: 0
+Shortest distance from vertex 1 to vertex 2: 4
+Shortest distance from vertex 1 to vertex 3: 5
+Shortest distance from vertex 1 to vertex 4: 13
+Shortest distance from vertex 1 to vertex 5: 6
+
+Menu:
+1. Display Adjacency List
+2. Perform Breadth-First Search (BFS)
+3. Perform Depth-First Search (DFS)
+4. Find Shortest Path using Dijkstra's Algorithm
+5. Exit
+Enter your choice: 5
+Exiting...
