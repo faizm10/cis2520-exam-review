@@ -1,9 +1,3 @@
-/*
-Name: Faiz Mustansar
-Student ID: 1261489
-Assignment: A3
-Date: Nov 15, 2024
-*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -14,6 +8,19 @@ Variable variables[10];
 int varCount = 0;
 int isValidCharacter(char c) {
     return isdigit(c) || isalpha(c) || c == '+' || c == '-' || c == '*' || c == '/' || c == '(' || c == ')' || c == '.';
+}
+// FreeTree function to free memory allocated for the tree
+void freeTree(Node *root)
+{
+    if (root == NULL)
+        return;
+
+    // Recursively free left and right subtrees
+    freeTree(root->left);
+    freeTree(root->right);
+
+    // Free the current node
+    free(root);
 }
 
 // The createNode function allocates memory to the tree and creates a new node using the given data before returning the node.
@@ -125,52 +132,31 @@ void postorder(Node *root)
 
 // The promptVariables function prompts the user to assign values to each variable found in the expression tree. The values should be stored in the Variables struct.
 void promptVariables(Node *root) {
-    if (root == NULL)
-        return;
+    if (root == NULL) return;
 
     if (isalpha(root->data[0])) { // Check if it's a variable
-        int found = 0;
+        // Check if the variable has already been assigned a value
         for (int i = 0; i < varCount; i++) {
             if (strcmp(variables[i].varName, root->data) == 0) {
-                found = 1;
-                break;
+                return; // Variable already assigned, no need to prompt again
             }
         }
-        if (!found) {
-            printf("Enter value for %s (press Enter to use default value 0.00): ", root->data);
 
-            char input[50];
-            float value = 0.00; // Default value
+        // Prompt the user for the variable value
+        float value;
+        printf("Enter value for %s: ", root->data);
+        scanf("%f", &value);
 
-            // Read input and handle empty input correctly
-            if (fgets(input, sizeof(input), stdin) != NULL) {
-                // Remove trailing newline character if present
-                size_t len = strlen(input);
-                if (len > 0 && input[len - 1] == '\n') {
-                    input[len - 1] = '\0';
-                }
-
-                // Only convert to float if user entered a value
-                if (strlen(input) > 0) {
-                    value = atof(input);
-                }
-            }
-
-            // Flush any extra characters in the input buffer
-            int ch;
-            while ((ch = getchar()) != '\n' && ch != EOF);
-
-            strcpy(variables[varCount].varName, root->data);
-            variables[varCount].value = value;
-            varCount++;
-        }
+        // Store the variable and its value
+        strcpy(variables[varCount].varName, root->data);
+        variables[varCount].value = value;
+        varCount++;
     }
 
     // Recursively prompt for variables in left and right subtrees
     promptVariables(root->left);
     promptVariables(root->right);
 }
-
 
 // The calculate function calculates the expression and returns its result. Division by 0 and/or other error scenarios should be checked.
 float getVariableValue(char *varName)

@@ -1,9 +1,3 @@
-/*
-Name: Faiz Mustansar
-Student ID: 1261489
-Assignment: A3
-Date: Nov 15, 2024
-*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -70,6 +64,6 @@ int main(int argc, char *argv[])
             printf("Please enter a valid choice.\n");
         }
     } while (choice != 5);
-
+    freeTree(root);
     return 0;
 }

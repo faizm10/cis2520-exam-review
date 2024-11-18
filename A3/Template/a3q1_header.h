@@ -1,11 +1,4 @@
-
-/*
-Name: Faiz Mustansar
-Student ID: 1261489
-Assignment: A3
-Date: Nov 15, 2024
-*/
-#include<stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
@@ -29,12 +22,14 @@ typedef struct
 
 extern Variable variables[10];
 extern int varCount;
-
+// FreeTree function to free memory allocated for the tree
+void freeTree(Node *root);
 Node *createNode(char *data);
 int isValidCharacter(char c);
 Node *parseExpression(char *expr);
 void preorder(Node *root);
 void inorder(Node *root);
+void clearInputBuffer();
 void postorder(Node *root);
 void promptVariables(Node *root);
 float calculate(Node *root);
