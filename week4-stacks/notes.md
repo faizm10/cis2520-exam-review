@@ -188,7 +188,7 @@ int main() {
 
 ---
 
-## Queue
+## Queue - [More Info In Week6](/week5-queuesandsearch) 
 
 - **Queue**: A queue is an ADT in which items are inserted at the end of the queue and removed from the front of the queue.
 - **Enqueue** operation inserts an item at the end of the queue.
