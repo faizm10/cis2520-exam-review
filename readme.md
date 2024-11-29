@@ -16,19 +16,19 @@ This repository contains **important notes and code examples** from the **CIS252
 
 ### Week 4: [**Stacks**](./week4-stacks)
 
-### Week 5: [**C Queues and Search**](./week5-Creview)
+### Week 5: [**C Queues and Search**](./week5-queuesandsearch)
 
 ### Week 6-7: **Midterm Review 1 and 2** - No Notes For Now
 
-### Week 8: [**Linked List (SLL and DLL)**](./week3-linkedlist)
+### Week 8: [**Hashing & Tree**](./week8-hashingandtree)
 
-### Week 9: [**Stacks**](./week4-stacks)
+### Week 9: [**Tree & Heap**](./week9-treeandheap)
 
-### Week 10: [**Stacks**](./week4-stacks)
+### Week 10: [**Tree & Graph**](./week10-treeandgraph)
 
-### Week 11: [**Stacks**](./week4-stacks)
+### Week 11: [**Graph**](./week11-graphs)
 
-### Week 12: [**Stacks**](./week4-stacks)
+### Week 12: [**Graph & Final Review**](./week12-graphandfinalreview)
 ---
 
 ## How to Use
