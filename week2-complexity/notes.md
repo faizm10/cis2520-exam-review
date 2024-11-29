@@ -86,93 +86,69 @@ Defines the **upper bound** of an algorithm's runtime. It describes the worst-ca
     – the knowledge of the programmer,
     – the algorithm itself, which may require simple but also time-consuming machine instructions
 
-### Big-O 1st Example: Show that `2n = O(n²)`
-
-#### Step 1: Big-O Definition
-By definition, for `f(n) = O(g(n))`, we need to find constants `c` and `n₀` such that:
-
-\[ f(n) \leq c \cdot g(n) \]
-
-for all \( n \geq n₀ \).
+Here’s the content formatted for your `README.md` file:
 
 ---
 
-#### Step 2: Apply the Definition
-Here, \( f(n) = 2n \) and \( g(n) = n² \). We substitute these values into the inequality:
+### Big-O Examples
 
-\[ 2n \leq c \cdot n² \]
+#### Example 1: Show that `2n = O(n²)`
 
----
+To prove `2n = O(n²)`, we use the definition of Big-O:
 
-#### Step 3: Simplify the Inequality
-Divide both sides by \( n \) (valid for \( n > 0 \)):
+1. **Definition**: \( f(n) = O(g(n)) \) means there exist constants \( c > 0 \) and \( n₀ \geq 1 \) such that:
+   \[
+   f(n) \leq c \cdot g(n), \text{ for all } n \geq n₀.
+   \]
 
-\[ \frac{2}{n} \leq c \]
+2. **Substitute** \( f(n) = 2n \) and \( g(n) = n² \):
+   \[
+   2n \leq c \cdot n²
+   \]
 
----
+3. **Simplify** by dividing both sides by \( n \) (valid for \( n > 0 \)):
+   \[
+   \frac{2}{n} \leq c
+   \]
 
-#### Step 4: Find \( c \) and \( n₀ \)
-To satisfy this inequality, choose \( c = 2 \) and \( n₀ = 1 \). For all \( n \geq n₀ \), the inequality holds true:
+4. **Choose constants**:
+   - \( c = 2 \)
+   - \( n₀ = 1 \)
 
-\[ \frac{2}{n} \leq 2 \]
-
----
-
-#### Conclusion:
-Since we found \( c = 2 \) and \( n₀ = 1 \), we can conclude that:
-
-\[ 2n = O(n²) \]
-
-### Big-O 2nd Example: Show that `2n = O(n)`
-
-#### Step 1: Big-O Definition
-By definition, for `f(n) = O(g(n))`, we need to find constants `c` and `n₀` such that:
-
+Thus, for \( n \geq 1 \), the inequality holds true. Therefore:
 \[
-f(n) \leq c \cdot g(n)
-\]
-
-for all \( n \geq n₀ \).
-
----
-
-#### Step 2: Apply the Definition
-Here, \( f(n) = 2n \) and \( g(n) = n \). Substituting these values into the inequality:
-
-\[
-2n \leq c \cdot n
+2n = O(n²)
 \]
 
 ---
 
-#### Step 3: Simplify the Inequality
-Divide both sides by \( n \) (valid for \( n > 0 \)):
+#### Example 2: Show that `2n = O(n)`
 
-\[
-2 \leq c
-\]
+To prove `2n = O(n)`, we follow the same steps:
 
----
+1. **Definition**: \( f(n) = O(g(n)) \) means there exist constants \( c > 0 \) and \( n₀ \geq 1 \) such that:
+   \[
+   f(n) \leq c \cdot g(n), \text{ for all } n \geq n₀.
+   \]
 
-#### Step 4: Find \( c \) and \( n₀ \)
-Choose \( c = 2 \) and \( n₀ = 1 \). For all \( n \geq n₀ \), the inequality holds true:
+2. **Substitute** \( f(n) = 2n \) and \( g(n) = n \):
+   \[
+   2n \leq c \cdot n
+   \]
 
-\[
-2n \leq 2 \cdot n
-\]
+3. **Simplify** by dividing both sides by \( n \) (valid for \( n > 0 \)):
+   \[
+   2 \leq c
+   \]
 
----
+4. **Choose constants**:
+   - \( c = 2 \)
+   - \( n₀ = 1 \)
 
-#### Conclusion:
-Since we found \( c = 2 \) and \( n₀ = 1 \), we can conclude that:
-
+Thus, for \( n \geq 1 \), the inequality holds true. Therefore:
 \[
 2n = O(n)
 \]
-
---- 
-
-This step-by-step explanation demonstrates how `2n` is \( O(n) \).
 
 ---
 
