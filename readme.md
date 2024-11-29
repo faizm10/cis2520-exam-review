@@ -8,7 +8,7 @@ This repository contains **important notes and code examples** from the **CIS252
 
 ## Study Topics by Week
 
-### Week 1: [**C Programming Review**](./Week1)
+### Week 1: [**C Programming Review**](./week1-Creview)
 - Overview of C programming concepts important for DSA:
   - **Storage Classes**: `auto`, `static`, `extern`, `register`.
   - **Pointers**: How they work, common use cases, and examples.
@@ -22,10 +22,10 @@ This repository contains **important notes and code examples** from the **CIS252
     - Pointers and arrays.
     - Character arrays and strings.
 
-### Week 2: [**Algorithm Complexity and Sorting**](./Week2)
+### Week 2: [**Algorithm Complexity and Sorting**](./week2-complexity)
 - What is an algorithm?
 - How to analyze algorithms:
-  - Best case, worst case, and average case.
+  - Best case, worst case, and average case.ß
   - How input size affects performance.
 - **Big-O, Omega, and Theta Notations**.
 - Sorting algorithms:
