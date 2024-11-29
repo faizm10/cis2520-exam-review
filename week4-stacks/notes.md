@@ -1,4 +1,4 @@
-# Week 3: Stacks
+# Week 4: Stacks
 
 ## Overview
 This week focuses on **Stacks** and their implementation.
