@@ -14,7 +14,7 @@ This repository contains **important notes and code examples** from the **CIS252
 
 ### Week 3: [**Linked List (SLL and DLL)**](./week3-linkedlist)
 
-### Week 4: [**Stacks**](./week3-stacks)
+### Week 4: [**Stacks**](./week4-stacks)
 
 
 ---
