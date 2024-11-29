@@ -313,6 +313,44 @@ int main() {
     return 0;
 }
 ```
+
+## Double-Linked Lists (DLL)
+
+- A doubly-linked list is a data structure for implementing a list ADT, where each node has data, a pointer to the next node, and a pointer to the previous node. The list structure typically has pointers to the first node and the last node. 
+- The doubly-linked list's first node is called the **head**, and the last node the **tail**.
+- A doubly-linked list is similar to a singly-linked list, but instead of using a single pointer to the next node in the list, each node has a pointer to the next and previous nodes. Such a list is called *doubly-linked* because each node has **two pointers**, or "links". A doubly-linked list is a type of **positional list**: A list where elements contain pointers to the next and/or previous elements in the list.
+![DLL](/week3-linkedlist/images/DLL1.png)
+
+### Operations:
+
+#### Append
+- Given a new node, the **append** operation for a doubly-linked list inserts the new node after the list's tail node. The append algorithm's behavior differs if the list is empty versus not empty:
+
+    - Append to *empty list*: If the list's head pointer is null, the algorithm points the list's head and tail pointers to the new node.
+    ![AppendToEmptyDLL](/week3-linkedlist/images/DLL2.png)
+    - Append to *non-empty list*: If the list's head pointer is not null, the algorithm points the tail node's next pointer to the new node, points the new node's previous pointer to the list's tail node, and points the list's tail pointer to the new node.
+    ![AppendToNonEmptyDLL](/week3-linkedlist/images/DLL3.png)
+
+#### Prepend
+- Given a new node, the **prepend** operation of a doubly-linked list inserts the new node before the list's head node and points the head pointer to the new node.
+
+    - Prepend to *empty list*: If the list's head pointer is null, the algorithm points the list's head and tail pointers to the new node.
+    - Prepend to *non-empty list*: If the list's head pointer is not null, the algorithm points the new node's next pointer to the list's head node, points the list head node's previous pointer to the new node, and then points the list's head pointer to the new node.
+    ![AppendToNonEmptyDLL](/week3-linkedlist/images/DLL4.png)
+
+#### Reverse Traversal
+- DLL supports a reverse traversal. It visits all nodes starting with the list's tail node and ending after visiting the list's head node.
+
+### Comparison: SLL vs. DLL
+
+| **Feature**               | **SLL**                                    | **DLL**                                   |
+|---------------------------|--------------------------------------------|-------------------------------------------|
+| **Traversal**             | One direction (head → tail)               | Both directions (head ↔ tail)             |
+| **Memory Usage**          | Less (one pointer per node)               | More (two pointers per node)              |
+| **Insertion/Deletion**    | Harder before a node, easier after         | Easier in both directions                 |
+| **Implementation Complexity** | Simpler                                 | More complex                              |
+
+
 ## References
 
 - **Video: "Creating the Node of a Single Linked List"** by Neso Academy  
