@@ -96,21 +96,21 @@ Here’s the content formatted for your `README.md` file:
 
 To prove `2n = O(n²)`, we do the following steps:
 
-1. By definition, we need to find a constant c such that: `f(c) ≤ c * g(n)`
+1. By definition, we need to find a constant `c` such that:  
+   `f(n) ≤ c * g(n)`
 
-2. Substitute f(n) = 2n and g(n) = n: 
-`2n ≤ c * n`
+2. Substitute `f(n) = 2n` and `g(n) = n²`:  
+   `2n ≤ c * n²`
 
-3. Now we simplify by dividing both sides by n (this is valud as n > 0):
-`2 ≤ c`
+3. Simplify by dividing both sides by `n` (valid since `n > 0`):  
+   `2 ≤ c`
 
-4: We choose constants c and n0 to satisfy the Big-O Definition:
-`c = 2`
-`n0 = 1`
+4. Choose constants `c` and `n₀` to satisfy the Big-O definition:  
+   `c = 2`, `n₀ = 1`
 
-Thus we can see that for n ≥ 1, the inequality holds true. Therefore: 2n = O(n)
+Thus, for `n ≥ 1`, the inequality holds true. Therefore:  
+`2n = O(n²)`
 
----
 
 ### 2. Omega Notation (`Ω`)
 Defines the **lower bound** of an algorithm's runtime. It describes the best-case scenario.
