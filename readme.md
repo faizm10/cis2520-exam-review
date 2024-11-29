@@ -45,9 +45,18 @@ This repository contains **important notes and code examples** from the **CIS252
 ## Contributing
 
 Want to help improve this repository? Here’s how:
-1. Fork this repository.
-2. Add your notes or code examples.
-3. Submit a pull request with a short description of your changes.
+```
+git checkout -b {your-name/feature}
+git add .
+git commit -m "New Feature"
+git push --set-upstream origin '{your-name/feature}'
+git checkout main
+
+```
+
+REPLACE `{your-name/feature}` with your name and the feature you're adding! If it's not your first commit, use `git push` rather than `git push --set-upstream origin {your-name/feature}`
+
+Then head over to the GitHub repo online and create a pull request from the branch you just created.
 
 ---
 
