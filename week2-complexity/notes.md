@@ -94,61 +94,21 @@ Here’s the content formatted for your `README.md` file:
 
 #### Example 1: Show that `2n = O(n²)`
 
-To prove `2n = O(n²)`, we use the definition of Big-O:
+To prove `2n = O(n²)`, we do the following steps:
 
-1. **Definition**: \( f(n) = O(g(n)) \) means there exist constants \( c > 0 \) and \( n₀ \geq 1 \) such that:
-   \[
-   f(n) \leq c \cdot g(n), \text{ for all } n \geq n₀.
-   \]
+1. By definition, we need to find a constant c such that: `f(c) ≤ c * g(n)`
 
-2. **Substitute** \( f(n) = 2n \) and \( g(n) = n² \):
-   \[
-   2n \leq c \cdot n²
-   \]
+2. Substitute f(n) = 2n and g(n) = n: 
+`2n ≤ c * n`
 
-3. **Simplify** by dividing both sides by \( n \) (valid for \( n > 0 \)):
-   \[
-   \frac{2}{n} \leq c
-   \]
+3. Now we simplify by dividing both sides by n (this is valud as n > 0):
+`2 ≤ c`
 
-4. **Choose constants**:
-   - \( c = 2 \)
-   - \( n₀ = 1 \)
+4: We choose constants c and n0 to satisfy the Big-O Definition:
+`c = 2`
+`n0 = 1`
 
-Thus, for \( n \geq 1 \), the inequality holds true. Therefore:
-\[
-2n = O(n²)
-\]
-
----
-
-#### Example 2: Show that `2n = O(n)`
-
-To prove `2n = O(n)`, we follow the same steps:
-
-1. **Definition**: \( f(n) = O(g(n)) \) means there exist constants \( c > 0 \) and \( n₀ \geq 1 \) such that:
-   \[
-   f(n) \leq c \cdot g(n), \text{ for all } n \geq n₀.
-   \]
-
-2. **Substitute** \( f(n) = 2n \) and \( g(n) = n \):
-   \[
-   2n \leq c \cdot n
-   \]
-
-3. **Simplify** by dividing both sides by \( n \) (valid for \( n > 0 \)):
-   \[
-   2 \leq c
-   \]
-
-4. **Choose constants**:
-   - \( c = 2 \)
-   - \( n₀ = 1 \)
-
-Thus, for \( n \geq 1 \), the inequality holds true. Therefore:
-\[
-2n = O(n)
-\]
+Thus we can see that for n ≥ 1, the inequality holds true. Therefore: 2n = O(n)
 
 ---
 
