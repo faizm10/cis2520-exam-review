@@ -172,6 +172,9 @@ int main(){
     – Before a given value
     – After a given value
 - All are possible, but differ in difficulty
+
+### Inserting as a new first element
+
 - Insertion is probably the easiest method to implement
 - Assume we have the following linked list created:
 ![Linked List Created](/week3-linkedlist/images/linkedlistexample.png)
@@ -181,7 +184,7 @@ int main(){
 - Here's what we have before we dive into adding 0 to before the first element in the linked list:
 ![PreviewLinkedList](/week3-linkedlist/images/PreviewLinkedList.png)
 
-- We would create a function add_begin to do it: 
+- We would create a function `add_begin` to do it: 
 
 ```c
 Struct node* add_begin (struct node* head, int d){
@@ -198,6 +201,118 @@ head = add_begin(head, add_data);
 
 ```
 
+### Inserting as a new first element
+
+- In this case, we would want to insert to the end
+- Assume we have the following linked list created:
+![Linked List Created](/week3-linkedlist/images/image.png)
+- And we want to insert `three` before the first element:
+![Adding 3](/week3-linkedlist/images/image1.png)
+
+- But WAIT! How do we know where is the end? The simple answer to this is *Traversal*
+![Traversal](/week3-linkedlist/images/image3.png)
+- The image above shows how to add a new node with the value `3` at the end of a linked list by updating the `next` pointer of the second node to point to the new node.
+-- Let's show this in C by creating a function `add_end` :
+
+```c
+void add_end (struct node *head, int d)
+{
+    struct node *ptr, *temp;
+    ptr = head;
+    temp = (struct node *)malloc(sizeof(struct node));
+    temp -> data = d;
+    temp -> next = NULL;
+    while(ptr -> next != NULL){
+        ptr = ptr -> next;
+    } // Traversal the current list
+    ptr -> next = temp;
+}
+
+// call the function, assuming the linked list already created
+void main(){
+    int add_data = 3;
+    add_end(head, add_data);
+}
+
+```
+
+### Deleting a node from a SLL
+
+- Hmm, what if we want to delete a node from the SLL? Well first we have to change the link in its *predecessor* (which means - previous node in the sequence)
+- This is slightly tricky, because you can’t follow a pointer backwards
+- Deleting the first node in a list is a special case
+
+- To delete the first element, change the head: 
+![Change the Head](/week3-linkedlist/images/delete1.png)
+
+- To delete some other element, change the link in its predecessor:
+![Change the Link](/week3-linkedlist/images/delete1.png)
+
+- Implementation in C:
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+// Define the structure for a linked list node
+struct Node {
+    int data;
+    struct Node* next;
+};
+
+// Function to remove a node after the given node (previous)
+void ListRemoveNodeAfter(struct Node* previous) {
+    if (previous != NULL && previous->next != NULL) {
+        struct Node* temp = previous->next;
+        previous->next = temp->next;
+        free(temp);
+    }
+}
+
+// Function to remove a specific item from the list
+int ListRemove(struct Node* head, int itemToRemove) {
+    struct Node* previous = NULL;
+    struct Node* current = head;
+    
+    // Traverse the list
+    while (current != NULL) {
+        if (current->data == itemToRemove) {
+            ListRemoveNodeAfter(previous);  // Remove the node after the previous one
+            return 1;  // Return true (1) if the item was removed
+        }
+
+        // Move to the next node
+        previous = current;
+        current = current->next;
+    }
+    
+    // Item not found
+    return 0;  // Return false (0) if the item was not found
+}
+
+int main() {
+    // Example usage of ListRemove
+    struct Node* head = malloc(sizeof(struct Node));
+    head->data = 1;
+    head->next = malloc(sizeof(struct Node));
+    head->next->data = 2;
+    head->next->next = malloc(sizeof(struct Node));
+    head->next->next->data = 3;
+    head->next->next->next = NULL;
+
+    // Remove item 2 from the list
+    int result = ListRemove(head, 2);
+
+    // Print the result
+    if (result) {
+        printf("Item removed successfully.\n");
+    } else {
+        printf("Item not found.\n");
+    }
+
+    return 0;
+}
+```
 ## References
 
 - **Video: "Creating the Node of a Single Linked List"** by Neso Academy  
