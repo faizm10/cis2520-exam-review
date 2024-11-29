@@ -16,7 +16,19 @@ This repository contains **important notes and code examples** from the **CIS252
 
 ### Week 4: [**Stacks**](./week4-stacks)
 
+### Week 5: [**C Queues and Search**](./week5-Creview)
 
+### Week 6-7: **Midterm Review 1 and 2** - No Notes For Now
+
+### Week 8: [**Linked List (SLL and DLL)**](./week3-linkedlist)
+
+### Week 9: [**Stacks**](./week4-stacks)
+
+### Week 10: [**Stacks**](./week4-stacks)
+
+### Week 11: [**Stacks**](./week4-stacks)
+
+### Week 12: [**Stacks**](./week4-stacks)
 ---
 
 ## How to Use
