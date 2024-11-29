@@ -10,7 +10,13 @@ This week focuses on **Queues** and **Search**, including their implementation.
 1. [Queues](#queues)
 2. [Array-Based Implementation](#array-based-implementation)
 3. [Linked List Implementation](#linked-list-implementation)
-4. [Resources](#resources)
+4. [Search: Definition](#search-definition)
+5. [Linear Search](#linear-search)
+6. [Binary Search](#binary-search)
+7. [Interpolation Search](#interpolation-search)
+8. [Recursive Algorithm](#recursive-algorithm)
+9. [Time Complexity Analysis](#time-complexity-analysis)
+10. [Resources](#resources)
 
 ---
 
@@ -330,12 +336,177 @@ int main() {
 }
 ```
 
+## Search: Definition
+
+- A **search** is a function or process used to find letters, words, files, web pages, or other data.
+- An **algorithm** is a sequence of steps to accomplish a task.
+- **Runtime** refers to the time an algorithm takes to execute.
+
+---
+
+## Linear Search
+
+### Definition
+- Linear search starts at the beginning of a list and checks each element sequentially until the search key is found or the list ends.
+- Used for unordered lists.
+
+### Example
+Find the position of `k=1` in the array `[3, 5, 1, 7]`:
+1. Start from the first element.
+2. Compare each element with `k`.
+3. If a match is found, return the index.
+4. If no match is found, return `-1`.
+
+#### Code
+```c
+int LinearSearch(int numbers[], int numbersSize, int key) { 
+    for (int i = 0; i < numbersSize; ++i) {
+        if (numbers[i] == key) { 
+            return i; 
+        } 
+    } 
+    return -1; // not found 
+}
+```
+
+### Time Complexity
+- **Best Case**: O(1) (when the key is the first element).
+- **Worst Case**: O(n) (when the key is the last element or not found).
+
+---
+
+## Binary Search
+
+### Definition
+- Used for **sorted arrays** to efficiently find an element.
+- The algorithm:
+  1. Check the middle element of the array.
+  2. If the key matches the middle element, return the index.
+  3. If the key is smaller, search the left sub-array.
+  4. If the key is larger, search the right sub-array.
+  5. Repeat until the element is found or the search space is empty.
+
+### Example
+Find the position of `k=23` in `[2, 5, 8, 12, 16, 23, 38, 56, 72, 91]`:
+1. Middle = `23` (key matches).
+2. Return index.
+
+![Binary Search Example](/week5-queuesandsearch/images/image6.png)
+
+
+#### Code
+```c
+int BinarySearch(int numbers[], int numbersSize, int key) {
+    int mid = 0, low = 0, high = numbersSize - 1;
+    while (high >= low) {
+        mid = (high + low) / 2;
+        if (numbers[mid] < key) {
+            low = mid + 1;
+        } else if (numbers[mid] > key) {
+            high = mid - 1;
+        } else {
+            return mid;
+        }
+    }
+    return -1; // not found
+}
+```
+
+### Time Complexity
+- **Best Case**: O(1) (when the key is the middle element).
+- **Worst Case**: O(log n) (halving the search space each iteration).
+
+---
+
+## Interpolation Search
+
+### Definition
+- An **improved version of Binary Search**, designed for uniformly distributed data.
+- The algorithm:
+  1. "Guess" the position of the searched element based on interpolation.
+  2. Compare the element at the guessed position with the target.
+  3. Narrow down the search space based on the result.
+
+### Formula
+Probe position:
+```math
+prob = low + ((x - A[low]) * (high - low)) / (A[high] - A[low])
+```
+
+### Example
+Find `x=3` in `[1, 3, 5, 7, 9, 11]`:
+1. Calculate `prob = 0 + ((3-1) * (5-0)) / (11-1) = 1`.
+2. Check `A[prob]`.
+3. Return position.
+
+#### Code
+```c
+int InterpolationSearch(int arr[], int arr_size, int x) {
+    int pos, lo = 0, hi = arr_size - 1;
+    while (lo <= hi && x >= arr[lo] && x <= arr[hi]) {
+        pos = lo + (((double)(hi - lo) / (arr[hi] - arr[lo])) * (x - arr[lo]));
+        if (arr[pos] == x)
+            return pos;
+        else if (arr[pos] < x)
+            lo = pos + 1;
+        else
+            hi = pos - 1;
+    }
+    return -1; // not found
+}
+```
+
+### Time Complexity
+- **Best Case**: O(1).
+- **Worst Case**: O(n) (when elements are not uniformly distributed).
+
+---
+
+## Recursive Algorithm
+
+### Definition
+- A recursive algorithm breaks a problem into smaller subproblems and applies the algorithm to solve those subproblems.
+- Example: Recursive Binary Search.
+
+#### Code
+```c
+int RecursiveBinarySearch(int arr[], int low, int high, int key) {
+    if (high >= low) {
+        int mid = (high + low) / 2;
+        if (arr[mid] == key) 
+            return mid;
+        if (arr[mid] > key) 
+            return RecursiveBinarySearch(arr, low, mid - 1, key);
+        return RecursiveBinarySearch(arr, mid + 1, high, key);
+    }
+    return -1; // not found
+}
+```
+
+---
+
+## Time Complexity Analysis
+
+### Binary Search
+- Key: How many times do we need to call the recursive function?
+- Assume array length `n`:
+  ```
+  (1/2)^x * n = 1 → x = log2(n)
+  ```
+- **Best Case**: O(1).
+- **Worst Case**: O(log n).
+
 ---
 
 ## Resources
-  - [JavaTpoint: Linked List Implementation of Queue](https://www.javatpoint.com/linked-list-implementation-of-queue)
-  - [Scaler: Queue Using Linked List](https://www.scaler.com/topics/c/implementation-of-queue-using-linked-list/)
-  - [MyCodeSchool: Array Implementation of Queue](https://www.youtube.com/watch?v=okr-XE8yTO8)
-  - [MyCodeSchool: Linked List Implementation of Queue](https://www.youtube.com/watch?v=A5_XdiK4J8A)
-  - [Linked List Implementation of Queue in C](https://gist.github.com/mycodeschool/7510222)
-  - [Alternative Implementation Without Rear Pointer](https://gist.github.com/kroggen/5fc7380d30615b2e70fcf9c7b69997b6)
+
+- [GeeksForGeeks: Complexity Analysis of Binary Search](https://www.geeksforgeeks.org/complexity-analysis-of-binary-search/)
+- [W3Resource: Interpolation Search](https://www.w3resource.com/c-programming-exercises/searching-and-sorting/c-search-and-sorting-exercise-19.php)
+- [JavaTpoint: Interpolation Search](https://www.javatpoint.com/interpolation-search)
+- [Recursive Binary Search](https://www.geeksforgeeks.org/binary-search/)
+- [JavaTpoint: Linked List Implementation of Queue](https://www.javatpoint.com/linked-list-implementation-of-queue)
+- [Scaler: Queue Using Linked List](https://www.scaler.com/topics/c/implementation-of-queue-using-linked-list/)
+- [MyCodeSchool: Array Implementation of Queue](https://www.youtube.com/watch?v=okr-XE8yTO8)
+- [MyCodeSchool: Linked List Implementation of Queue](https://www.youtube.com/watch?v=A5_XdiK4J8A)
+- [Linked List Implementation of Queue in C](https://gist.github.com/mycodeschool/7510222)
+- [Alternative Implementation Without Rear Pointer](https://gist.github.com/kroggen/5fc7380d30615b2e70fcf9c7b69997b6)
