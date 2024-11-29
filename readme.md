@@ -9,28 +9,8 @@ This repository contains **important notes and code examples** from the **CIS252
 ## Study Topics by Week
 
 ### Week 1: [**C Programming Review**](./week1-Creview)
-- Overview of C programming concepts important for DSA:
-  - **Storage Classes**: `auto`, `static`, `extern`, `register`.
-  - **Pointers**: How they work, common use cases, and examples.
-  - **Function Arguments**:
-    - Call by Value
-    - Call by Reference (using pointers).
-  - **Best Practices**:
-    - Avoid modifying loop variables inside loops.
-    - Use `break` and `continue` instead of `goto`.
-  - **Working with Arrays**:
-    - Pointers and arrays.
-    - Character arrays and strings.
 
 ### Week 2: [**Algorithm Complexity and Sorting**](./week2-complexity)
-- What is an algorithm?
-- How to analyze algorithms:
-  - Best case, worst case, and average case.ß
-  - How input size affects performance.
-- **Big-O, Omega, and Theta Notations**.
-- Sorting algorithms:
-  - Bubble Sort, Selection Sort, Insertion Sort, Merge Sort, Quick Sort.
-- Summary of sorting algorithm complexities.
 
 ### Week 3: [**Linked List (SLL and DLL)**](./week3-linkedlist)
 
