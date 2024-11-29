@@ -77,10 +77,102 @@ To predict:
 Defines the **upper bound** of an algorithm's runtime. It describes the worst-case scenario.
 - **Formal Definition**: `f(n) ∈ O(g(n))` if there exist constants `c > 0` and `n0` such that for all `n ≥ n0`:  
   `f(n) ≤ c * g(n)`
-  
-#### Examples:
-- Linear Growth: `O(n)`
-- Quadratic Growth: `O(n^2)`
+
+- Constant c could depend on
+    – the programming language used,
+    – the quality of the compiler or interpreter,
+    – the CPU speed,
+    – the size of the main memory and the access time to it,
+    – the knowledge of the programmer,
+    – the algorithm itself, which may require simple but also time-consuming machine instructions
+
+### Big-O 1st Example: Show that `2n = O(n²)`
+
+#### Step 1: Big-O Definition
+By definition, for `f(n) = O(g(n))`, we need to find constants `c` and `n₀` such that:
+
+\[ f(n) \leq c \cdot g(n) \]
+
+for all \( n \geq n₀ \).
+
+---
+
+#### Step 2: Apply the Definition
+Here, \( f(n) = 2n \) and \( g(n) = n² \). We substitute these values into the inequality:
+
+\[ 2n \leq c \cdot n² \]
+
+---
+
+#### Step 3: Simplify the Inequality
+Divide both sides by \( n \) (valid for \( n > 0 \)):
+
+\[ \frac{2}{n} \leq c \]
+
+---
+
+#### Step 4: Find \( c \) and \( n₀ \)
+To satisfy this inequality, choose \( c = 2 \) and \( n₀ = 1 \). For all \( n \geq n₀ \), the inequality holds true:
+
+\[ \frac{2}{n} \leq 2 \]
+
+---
+
+#### Conclusion:
+Since we found \( c = 2 \) and \( n₀ = 1 \), we can conclude that:
+
+\[ 2n = O(n²) \]
+
+### Big-O 2nd Example: Show that `2n = O(n)`
+
+#### Step 1: Big-O Definition
+By definition, for `f(n) = O(g(n))`, we need to find constants `c` and `n₀` such that:
+
+\[
+f(n) \leq c \cdot g(n)
+\]
+
+for all \( n \geq n₀ \).
+
+---
+
+#### Step 2: Apply the Definition
+Here, \( f(n) = 2n \) and \( g(n) = n \). Substituting these values into the inequality:
+
+\[
+2n \leq c \cdot n
+\]
+
+---
+
+#### Step 3: Simplify the Inequality
+Divide both sides by \( n \) (valid for \( n > 0 \)):
+
+\[
+2 \leq c
+\]
+
+---
+
+#### Step 4: Find \( c \) and \( n₀ \)
+Choose \( c = 2 \) and \( n₀ = 1 \). For all \( n \geq n₀ \), the inequality holds true:
+
+\[
+2n \leq 2 \cdot n
+\]
+
+---
+
+#### Conclusion:
+Since we found \( c = 2 \) and \( n₀ = 1 \), we can conclude that:
+
+\[
+2n = O(n)
+\]
+
+--- 
+
+This step-by-step explanation demonstrates how `2n` is \( O(n) \).
 
 ---
 

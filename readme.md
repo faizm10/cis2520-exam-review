@@ -50,3 +50,7 @@ Want to help improve this repository? Here’s how:
 3. Submit a pull request with a short description of your changes.
 
 ---
+
+## Resources
+- ZyBook Data Structures in Pseudocode
+- [GeeksforGeeks](https://www.geeksforgeeks.org/)
