@@ -79,6 +79,8 @@ A **linked list** is a data structure that can change during execution. Successi
   - Elements contain pointers to the next (and/or previous) elements.
   - It is commonly used to implement a **list ADT**.
 
+![Linked List Implementation](/week3-linkedlist/images/linkedlist.png)
+
 ---
 
 #### Implementation in C
@@ -149,7 +151,6 @@ int main(){
     return 0;
 }
 ```
-![Linked List Implementation](/week3-linkedlist/images/linkedlist.png)
 
 ---
 
@@ -178,7 +179,6 @@ int main(){
 ![Adding 0](/week3-linkedlist/images/linkedlistexample1.png)
 
 - Here's what we have before we dive into adding 0 to before the first element in the linked list:
-
 ![PreviewLinkedList](/week3-linkedlist/images/PreviewLinkedList.png)
 
 - We would create a function add_begin to do it: 
