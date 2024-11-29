@@ -32,11 +32,16 @@ This repository contains **important notes and code examples** from the **CIS252
   - Bubble Sort, Selection Sort, Insertion Sort, Merge Sort, Quick Sort.
 - Summary of sorting algorithm complexities.
 
+### Week 3: [**Linked List (SLL and DLL)**](./week3-linkedlist)
+
+### Week 4: [**Stacks**](./week3-stacks)
+
+
 ---
 
 ## How to Use
 
-1. Browse the folders for each week (e.g., [Week1](./Week1), [Week2](./Week2)).
+1. Browse the folders for each week.
 2. Review the notes and run the code examples.
 3. Practice implementing the concepts yourself!
 
