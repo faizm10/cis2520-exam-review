@@ -65,9 +65,6 @@ Use the `images/` folder to store any visuals related to the topic. Refer to the
 ![Example Image](images/example.png)
 ```
 ```
-
----
-
 ### 5. Commit Your Changes
 - Stage your changes:
   ```bash
