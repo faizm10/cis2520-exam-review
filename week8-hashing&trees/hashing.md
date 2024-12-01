@@ -54,6 +54,14 @@ We will be focusing on Hashing as there are a lot of content to go over. Trees w
 
 ---
 
+### Challenges with Hash Tables
+
+- Keys must be unique and must be integers
+- For storage efficiency keys must be *dense* in the range
+- if they are *sparse* (lots of gaps between values), a lot of unnecessary space is used to obtain speed
+
+---
+
 ### Example
 
 #### Storing Phone Numbers:
@@ -63,27 +71,6 @@ We will be focusing on Hashing as there are a lot of content to go over. Trees w
   - Steps:
     1. Compute hash: `0004 mod 10 = 4`.
     2. Store `416-229-0004` in bucket `4`.
-
----
-
-### Challenges with Hash Tables
-
-- Keys must be unique and must be integers
-- For storage efficiency keys must be *dense* in the range
-- if they are *sparse* (lots of gaps between values), a lot of unnecessary space is used to obtain speed
-
----
-
-### Common Uses for Hash Tables
-
-1. **Fast Lookups**:
-   - Quickly find items in a database or dictionary.
-2. **Caching**:
-   - Store frequently used data for fast access.
-3. **Symbol Tables**:
-   - Used in programming languages to match variable names to memory locations.
-4. **Set Operations**:
-   - Quickly check if an item exists in a set.
 
 ---
 
