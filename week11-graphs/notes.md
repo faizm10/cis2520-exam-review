@@ -29,7 +29,7 @@ This document provides a comprehensive guide to two fundamental shortest path al
 - Efficient for graphs without negative edge weights
 
 ### Example, whats the shortest path here? between 1 and 2:
-![DijKstra's Basics](reviewCIS2520/cis2520-exam-review/week11-graphs/images/ds_review.png) 
+![DijKstra's Basics](/week11-graphs/images/ds_review.png) 
 
 ### Example Procedure
 
