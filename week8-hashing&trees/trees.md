@@ -37,7 +37,7 @@ We will be focusing on Trees
 
 - This may seem a lot of definitions coming rihght at ya but don't worry, we will break it down with some visuals along the way!
 
-![Binary Tree Example](/week6-hashingandtrees/images/image1.png)
+![Binary Tree Example](/week8-hashing&trees/images/image1.png)
 
 - Let's answer some questions for the image below:
     - Root Node: **Jones**
@@ -52,7 +52,7 @@ We will be focusing on Trees
     - The descendants of Adams are _____. **Gong, Gupta and Carvey**
         - How? **Descendants are determined by starting at a node's children and then continuing down to the leaves. Doing so for Adams visits three nodes: Gong, Gupta, and Carvey.**
 
-![Binary Tree Example](/week6-hashingandtrees/images/image3.png)
+![Binary Tree Example](/week8-hashing&trees/images/image3.png)
 
 ### Special types of Binary Trees
 
@@ -61,13 +61,13 @@ We will be focusing on Trees
     - A binary tree is **complete** if all levels, except possibly the last level, contain all possible nodes and all nodes in the last level are as far left as possible.
     - A binary tree is **perfect** if all internal nodes have 2 children and all leaf nodes are at the same level.
 
-![Types of Binary Tree](/week6-hashingandtrees/images/image2.png)
+![Types of Binary Tree](/week8-hashing&trees/images/image2.png)
 
 ### Subtree
 
 - A binary tree subtree is any node X in the tree and all of X's descendants. Node X is the subtree's root, and the subtree itself is a valid binary tree.
 
-![SubTree](/week6-hashingandtrees/images/image4.png)
+![SubTree](/week8-hashing&trees/images/image4.png)
 
 ### Binary Tree Representation
 
@@ -97,7 +97,7 @@ struct node {
    - Traverse right subtree.
    - Example order: `A, B, C`.
 
-![Pre-Order](/week6-hashingandtrees/images/image5.png)
+![Pre-Order](/week8-hashing&trees/images/image5.png)
 
 2. **In-order Traversal (Symmetric)**:
    - Traverse left subtree.
@@ -105,7 +105,7 @@ struct node {
    - Traverse right subtree.
    - Example order: `B, A, C`.
 
-![In-Order](/week6-hashingandtrees/images/image5.png)
+![In-Order](/week8-hashing&trees/images/image5.png)
 
 3. **Post-order Traversal**:
    - Traverse left subtree.
@@ -113,13 +113,13 @@ struct node {
    - Visit root.
    - Example order: `B, C, A`.
 
-![Post-Order](/week6-hashingandtrees/images/image5.png)
+![Post-Order](/week8-hashing&trees/images/image5.png)
 
 4. **Level-order Traversal (Breadth-First)**:
    - Visit nodes level by level, left to right.
    - Example order: `A, B, C`.
 
-![Pre-Order](/week6-hashingandtrees/images/image5.png)
+![Pre-Order](/week8-hashing&trees/images/image5.png)
 
 ---
 
