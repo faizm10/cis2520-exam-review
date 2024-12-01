@@ -26,6 +26,32 @@ We will be focusing on Hashing as there are a lot of content to go over. Trees w
 - **Hash Function**: A formula that turns a key into a bucket index.
 - **Hash Code**: A non-negative number produced by the hash function to identify where the key-value pair should go.
 
+## Collision
+
+- A **collision** occurs when an item being inserted into a hash table maps to the same buckets as an existing item in the hashtable
+- **Chaining** is a collision resultion technique where each bucket has a list of items
+
+### Collision Resolution Using Linked List:
+
+- Dynamically allocate space
+- Easy to Insert/Delete an item
+- Need a link for each node in the hash table
+
+![Collision via Linked List](/week8-hashingandtrees/images/image11.png)
+
+---
+
+### Why Use Hash Tables?
+
+   - Assume items have integer keys in the range **1 .. m**
+   - Use the value of the key itself to select a slot (**bucket**) in a *direct access table* to *store* the item
+
+![DAT](/week8-hashingandtrees/images/image12.png)
+
+   - To *search* for an item which key, **k**, just look in slot **k** and see if there is an item. If the tag is 0, it's missing
+   - Hash tables can quickly find, insert, or delete items in **O(1)** time on average.
+   - You can use numbers, text, or other types as keys.
+
 ---
 
 ### Example
@@ -38,14 +64,6 @@ We will be focusing on Hashing as there are a lot of content to go over. Trees w
     1. Compute hash: `0004 mod 10 = 4`.
     2. Store `416-229-0004` in bucket `4`.
 
----
-
-### Why Use Hash Tables?
-
-- **Fast Data Access**: 
-   - Hash tables can quickly find, insert, or delete items in **O(1)** time on average.
-- **Flexible Keys**: 
-   - You can use numbers, text, or other types as keys.
 ---
 
 ### Challenges with Hash Tables

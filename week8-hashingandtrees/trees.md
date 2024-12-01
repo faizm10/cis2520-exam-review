@@ -10,6 +10,7 @@ We will be focusing on Trees
 ### What is a tree?
 
 - It is a abstract model of a hierarchical structure which contains nodes and edges with a parent-child relation
+- datatype can be any (e.g strings, numbers, etc)
 - Some of the real life applications include:
     - Organization Charts
     - File Systems
