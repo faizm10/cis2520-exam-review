@@ -11,7 +11,7 @@ We will be focusing on Binary Search Tree
     - the right child if the search key is **>** currentNode's key.
 - The algorithm continues until either a match is found or currentNode is null.
 
-![Binary Search Tree](/week6-hashingandtrees/images/image6.png)
+![Binary Search Tree](/week8-hashing&trees/images/image6.png)
 
 ---
 
@@ -42,7 +42,7 @@ BSTSearch(tree, key)
 - **Example**: Searching for `4` in the tree:
   - Visit nodes in the order `6 → 4`.
 
-![Binary Search Tree -- Search Example](/week6-hashingandtrees/images/image7.png)
+![Binary Search Tree -- Search Example](/week8-hashing&trees/images/image7.png)
 
 ---
 
@@ -80,7 +80,7 @@ BSTInsert(tree, node)
   - Traversal: `6 → 4`.
   - Insert `5` as the right child of `4`.
 
-![Binary Search Tree -- Insertion Example](/week6-hashingandtrees/images/image8.png)
+![Binary Search Tree -- Insertion Example](/week8-hashing&trees/images/image8.png)
 
 ---
 
@@ -104,8 +104,8 @@ BSTInsert(tree, node)
     - Successor is found in the right subtree.
     - Update node and recursively remove the successor.
 
-![Binary Search Tree -- Removal](/week6-hashingandtrees/images/image9.png)
-![Binary Search Tree -- Removal](/week6-hashingandtrees/images/image10.png)
+![Binary Search Tree -- Removal](/week8-hashing&trees/images/image9.png)
+![Binary Search Tree -- Removal](/week8-hashing&trees/images/image10.png)
 
 ---
 
