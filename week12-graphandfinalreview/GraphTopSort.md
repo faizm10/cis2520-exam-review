@@ -3,10 +3,18 @@
 ## Overview
 
 ## Table of Contents
-1. 
-2. 
-3. 
-4. 
+1. [Topological Sort](#topological-sort)  
+    - [Quick Example](#quick-example)  
+    - [Identify Valid Topological Sorts](#identify-valid-topological-sorts)  
+    - [Topological Sort Algorithm](#topological-sort-algorithm)  
+    - [Visual Representation](#visual-representation)  
+    - [Questions for Topological Sorting Algorithm](#questions-for-topological-sorting-algorithm)  
+2. [Topological Sort Implementation](#topological-sort-implementation)  
+    - [Quick Questions about the Implementation](#quick-questions-about-the-implementation)  
+3. [Algorithm Efficiency](#algorithm-efficiency)  
+    - [Space Complexity](#space-complexity)  
+    - [Time Complexity](#time-complexity)  
+    - [Questions for Complexity](#questions-for-complexity)
 
 ---
 
