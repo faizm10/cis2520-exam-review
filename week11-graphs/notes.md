@@ -218,7 +218,11 @@ The start vertex is J. Vertices in the graph are processed in the following orde
 
 **Answer:**: When J is visited, G is adjacent. The path through J to G is 0 + 4 = 4, which is less than ∞, so G is updated with **4/J**.
 
-**Tip:**  Take it one step at a time. For each vertex, update its distance based on the shortest path found so far. Follow the given order, and don’t rush - just check each connection carefully and update if you find a shorter path.
+**Question 3**: What are E's values after the final iteration?
+    - 9/F
+    - ∞/NULL
+
+**Answer:**: No path exists from J to E, so E will never be updated from the original values of ∞ / null. In other words, E is infinitely far from J, because no path exists. So it would be **∞/NULL** in this case.
 
 ### Pseudocode
 ```python
