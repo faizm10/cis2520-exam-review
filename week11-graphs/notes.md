@@ -140,15 +140,22 @@ For each edge (u, v) with weight w:
 
 ![Checking for Negative Edge Weight Cycles](./images/image3.png)
 
-- After visiting all vertices V-1 times, the Bellman-Ford algorithm checks for negative edge weight cycles.
-- We have to do check the following edges: A->B, B->C, C->D, D->B
-- Let's go through one by one. Let's start off with edge **A->B**   
-![Step 1](./images/image4.png)
-- We can see that there is no shorter path. Let's check for edge B->C!
-![Step 2](./images/image5.png)
-- Here, we can see that there is a shorter path is found through B to C, so a negative edge weight cycle exists. 
-- So the algorithm returns false, indicating a shortest path does not exist!
-![Final Step](./images/image6.png)(./images/image7.png)
+- After visiting all vertices \(V-1\) times, the Bellman-Ford algorithm checks for negative edge weight cycles.
+- The following edges need to be checked: **A → B, B → C, C → D, D → B**.
+- Let's examine each edge step by step:
+
+1. **Edge A → B**  
+   ![Step 1](./images/image4.png)  
+   - No shorter path is found.
+
+2. **Edge B → C**  
+   ![Step 2](./images/image5.png)  
+   - A shorter path is found through **B → C**, indicating a **negative edge weight cycle**.
+
+- Since a negative edge weight cycle exists, the algorithm returns **false**, meaning no shortest path exists.
+
+![Final Step](./images/image6.png)  
+![Additional Step](./images/image7.png)
 
 ### Quick Check
 
