@@ -178,7 +178,7 @@ What does the Bellman-Ford algorithm return for the following graph with a start
 - True
 - False
 
-**Answer:**: Bellman-Ford algorithm returns **false** because a negative edge weight cycle exists, namely F, G, J, F is 3 + -8 + 1 = -4.
+**Answer**: Bellman-Ford algorithm returns **false** because a negative edge weight cycle exists, namely F, G, J, F is 3 + -8 + 1 = -4.
 
 ### Example Procedure
 
@@ -234,8 +234,8 @@ What are D's values after the first iteration?
 - ∞/NULL
 
 **Answer:**: Per the instructions, vertices in the main iteration are visited as A, B, C, D. 
-- When A was visited, B is adjacent and the path from A to B is 0 + 2, so B was updated to 2 / A. 
-- When B was visited, D was updated to 2 + 9 = 11 / B, and C to 2 + -5 = -3 / B. 
+- When A was visited, B is adjacent and the path from A to B is 0 + 2, so B was updated to **2 / A**. 
+- When B was visited, D was updated to 2 + 9 = 11 / B, and C to 2 + -5 = **-3 / B**. 
 - When C is visited, D will be updated to -3 + 1 = **-2 / C**.
 
 **Tip:**  Take it one step at a time. For each vertex, update its distance based on the shortest path found so far. Follow the given order, and don’t rush - just check each connection carefully and update if you find a shorter path.
@@ -313,11 +313,8 @@ Both algorithms solve the shortest path problem but have different strengths. Ch
 
 ## Resources
 
-1. **Dijkstra's Shortest Path Algorithm - A Detailed and Visual Introduction**  
-   [Read on freeCodeCamp](https://www.freecodecamp.org/news/dijkstras-shortest-path-algorithm-visual-introduction/#:~:text=Dijkstra's%20Algorithm%20finds%20the%20shortest,node%20and%20all%20other%20nodes.)
+- [Dijkstra's Shortest Path Algorithm - A Detailed and Visual Introduction](https://www.freecodecamp.org/news/dijkstras-shortest-path-algorithm-visual-introduction/#:~:text=Dijkstra's%20Algorithm%20finds%20the%20shortest,node%20and%20all%20other%20nodes.)
 
-2. **Bellman-Ford's Algorithm**  
-   [Read on GeeksforGeeks](https://www.geeksforgeeks.org/bellman-ford-algorithm-dp-23/)
+- [Bellman-Ford's Algorithm](https://www.geeksforgeeks.org/bellman-ford-algorithm-dp-23/)
 
-3. **Dijkstra's vs Bellman-Ford Algorithm**  
-   [Read on Medium](https://medium.com/@brianpatrao1996/dijkstras-vs-bellman-ford-algorithm-383e4771c2cb#:~:text=One%20of%20the%20main%20benefits,is%20the%20number%20of%20vertices.)
+- [Dijkstra's vs Bellman-Ford Algorithm](https://medium.com/@brianpatrao1996/dijkstras-vs-bellman-ford-algorithm-383e4771c2cb#:~:text=One%20of%20the%20main%20benefits,is%20the%20number%20of%20vertices.)
