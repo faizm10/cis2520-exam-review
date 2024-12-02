@@ -24,7 +24,7 @@ This repository contains **important notes and code examples** from the **CIS252
 
 ### Week 9: [**Tree & Heap**](./week9-AVLtrees&heaps)
 
-### Week 10: [**Tree & Graph**](./week10-trees&graph)
+### Week 10: [**Trees & Graph**](./week10-trees&graphs)
 
 ### Week 11: [**Graph**](./week11-graphs)
 
