@@ -2,7 +2,7 @@
 
 ## About
 
-This repository contains **important notes and code examples** from the **CIS2520: Data Structures and Algorithms** course at the **University of Guelph** 🎓. It is designed to help students review key topics and practice coding. Feel free to add new notes, fix errors, or share code examples!
+This repository contains **important notes and code examples** from the **CIS2520: Data Structures and Algorithms** course at the **University of Guelph** 🎓. It is designed to help students review key topics and practice coding. Feel free to add new notes, fix errors, or share/addd more code examples!
 
 ---
 
@@ -20,11 +20,11 @@ This repository contains **important notes and code examples** from the **CIS252
 
 ### Week 6-7: **Midterm Review 1 and 2** - No Notes For Now
 
-### Week 8: [**Hashing & Tree**](./week8-hashingandtree)
+### Week 8: [**Hashing & Tree**](./week8-hashing&trees)
 
-### Week 9: [**Tree & Heap**](./week9-treeandheap)
+### Week 9: [**Tree & Heap**](./week9-AVLtrees&heaps)
 
-### Week 10: [**Tree & Graph**](./week10-treeandgraph)
+### Week 10: [**Tree & Graph**](./week10-tree&graph)
 
 ### Week 11: [**Graph**](./week11-graphs)
 
@@ -58,5 +58,6 @@ Then head over to the GitHub repo online and create a pull request from the bran
 ---
 
 ## Resources
+- Yan Yan's Lecture Slides
 - ZyBook Data Structures in Pseudocode
 - [GeeksforGeeks](https://www.geeksforgeeks.org/)
