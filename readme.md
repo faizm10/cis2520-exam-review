@@ -16,7 +16,7 @@ This repository contains **important notes and code examples** from the **CIS252
 
 ### Week 4: [**Stacks**](./week4-stacks)
 
-### Week 5: [**C Queues and Search**](./week5-queuesandsearch)
+### Week 5: [**Queues and Search**](./week5-queuesandsearch)
 
 ### Week 6-7: **Midterm Review 1 and 2** - No Notes For Now
 
