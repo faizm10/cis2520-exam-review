@@ -156,13 +156,22 @@ Let's do a small example:
 
 ![alt text](./images/image9.png)
 
-**Question 1:**: Given the following result from the Bellman-Ford algorithm for a start vertex of A, a negative edge weight cycle is found when checking adjacent vertices of vertex _____.
-    - B
-    - C
-    - D
+**Question 1:**  
+Given the following result from the Bellman-Ford algorithm for a start vertex of A, a negative edge weight cycle is found when checking adjacent vertices of vertex:  
+- B  
+- C  
+- D
 
-**Answer:**: The path through **B to C** has distance 1 + 3 = 4, which is less than than C's distance of 5. Because a shorter path is still found after the V-1 iterations, a **negative edge weight exists**.
+**Answer**: The path through **B to C** has distance 1 + 3 = 4, which is less than than C's distance of 5. Because a shorter path is still found after the V-1 iterations, a **negative edge weight exists**.
 
+![alt text](./images/image10.png)
+
+**Question 2:**
+What does the Bellman-Ford algorithm return for the following graph with a start vertex of H?
+- True
+- False
+
+**Answer:**: Bellman-Ford algorithm returns **false** because a negative edge weight cycle exists, namely F, G, J, F is 3 + -8 + 1 = -4.
 
 ### Example Procedure
 
@@ -196,28 +205,31 @@ The start vertex is A. In each main iteration, vertices in the graph are visited
 
 ![Bellman-Ford shortest path traversal](./images/image1.png)
 
-**Question 1**: What are B's values after the first iteration?
-    - 2/A
-    - ∞/NULL
+**Question 1**: 
+What are B's values after the first iteration?
+- 2/A
+- ∞/NULL
 
 **Answer:**: Per the instructions, A is visited first. B is adjacent, and the path from A to B has distance 0 + 2, which is less than B's current distance of ∞. So B is updated to **2 / A**.
 
-**Question 2**: What are C's values after the first iteration?
-    - -5/B
-    - -3/B
-    - ∞/NULL
+**Question 2**: 
+What are C's values after the first iteration?
+- -5/B
+- -3/B
+- ∞/NULL
 
 **Answer:**: When A was visited, B is adjacent with distance from A to B of 0 + 2 = 2, so was updated to 2 / A. Next, when B is visited, C is adjacent with distance through B to C of 2 + -5 = -3. So C will be updated to **-3 / B**.
 
-**Question 3**: What are D's values after the first iteration?
-    - 3/A
-    - -2/C
-    - ∞/NULL
+**Question 3**: 
+What are D's values after the first iteration?
+- 3/A
+- -2/C
+- ∞/NULL
 
 **Answer:**: Per the instructions, vertices in the main iteration are visited as A, B, C, D. 
-    - When A was visited, B is adjacent and the path from A to B is 0 + 2, so B was updated to 2 / A. 
-    - When B was visited, D was updated to 2 + 9 = 11 / B, and C to 2 + -5 = -3 / B. 
-    - When C is visited, D will be updated to -3 + 1 = **-2 / C**.
+- When A was visited, B is adjacent and the path from A to B is 0 + 2, so B was updated to 2 / A. 
+- When B was visited, D was updated to 2 + 9 = 11 / B, and C to 2 + -5 = -3 / B. 
+- When C is visited, D will be updated to -3 + 1 = **-2 / C**.
 
 **Tip:**  Take it one step at a time. For each vertex, update its distance based on the shortest path found so far. Follow the given order, and don’t rush - just check each connection carefully and update if you find a shorter path.
 
@@ -227,28 +239,32 @@ The start vertex is J. Vertices in the graph are processed in the following orde
 
 ![Bellman-Ford: Distance and predecessor values](./images/image2.png)
 
-**Question 1**: How many iterations are executed?
-    - 5
-    - 4
-    - 6
+**Question 1**: 
+How many iterations are executed?
+- 5
+- 4
+- 6
 
 **Answer:**: Remember that the number of iterations is the number of vertices minus 1 (V-1). The graph has 5 vertices. 5 - 1 = **4**.
 
-**Question 2**: What are F's values after the first iteration?
-    - 7/G
-    - ∞/NULL
+**Question 2**: 
+What are F's values after the first iteration?
+- 7/G
+- ∞/NULL
 
 **Answer:**: The order of visiting vertices is E, F, G, H, J. Since E, F, and G all have a distance of infinity, they can't update the distances of their neighbors (F, H, and J). In each step, the algorithm can only update one vertex's shortest path at a time. So the answer for this case would be **∞/NULL**
 
-**Question 3**: What are G's values after the first iteration?
-    - 4/J
-    - ∞/NULL
+**Question 3**: 
+What are G's values after the first iteration?
+- 4/J
+- ∞/NULL
 
 **Answer:**: When J is visited, G is adjacent. The path through J to G is 0 + 4 = 4, which is less than ∞, so G is updated with **4/J**.
 
-**Question 3**: What are E's values after the final iteration?
-    - 9/F
-    - ∞/NULL
+**Question 3**: 
+What are E's values after the final iteration?
+- 9/F
+- ∞/NULL
 
 **Answer:**: No path exists from J to E, so E will never be updated from the original values of ∞ / null. In other words, E is infinitely far from J, because no path exists. So it would be **∞/NULL** in this case.
 
