@@ -81,12 +81,12 @@ Defines the **upper bound** of an algorithm's runtime. It describes the worst-ca
   `f(n) ≤ c * g(n)`
 
 - Constant c could depend on
-    – the programming language used,
-    – the quality of the compiler or interpreter,
-    – the CPU speed,
-    – the size of the main memory and the access time to it,
-    – the knowledge of the programmer,
-    – the algorithm itself, which may require simple but also time-consuming machine instructions
+– the programming language used,
+– the quality of the compiler or interpreter,
+– the CPU speed,
+– the size of the main memory and the access time to it,
+– the knowledge of the programmer,
+– the algorithm itself, which may require simple but also time-consuming machine instructions
 
 ### Big-O Examples
 
