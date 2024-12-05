@@ -37,7 +37,7 @@ We will be focusing on Hashing as there are a lot of content to go over. Trees w
 - Easy to Insert/Delete an item
 - Need a link for each node in the hash table
 
-![Collision via Linked List](/week8-hashingandtrees/images/image11.png)
+![Collision via Linked List](/week8-hashing&trees/images/image11.png)
 
 ---
 
@@ -46,7 +46,7 @@ We will be focusing on Hashing as there are a lot of content to go over. Trees w
    - Assume items have integer keys in the range **1 .. m**
    - Use the value of the key itself to select a slot (**bucket**) in a *direct access table* to *store* the item
 
-![DAT](/week8-hashingandtrees/images/image12.png)
+![DAT](/week8-hashing&trees/images/image12.png)
 
    - To *search* for an item which key, **k**, just look in slot **k** and see if there is an item. If the tag is 0, it's missing
    - Hash tables can quickly find, insert, or delete items in **O(1)** time on average.
@@ -218,7 +218,7 @@ int HashInsertQP(int hashTable[], int N, int key) {
         - `55 → Bucket 10`
         - `63 → Bucket 1`
     - Insert keys 18, 41, 22, 44, 59, 32, 31, 73, in this order
-        ![Double Hashing](/week6-hashingandtrees/images/image.png)
+        ![Double Hashing](/week8-hashing&trees/images/image.png)
 
 #### Code for Double Hashing
 ```c
